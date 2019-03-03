@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: 'esenapa';
-  src:url("../esenapaj.otf");
+  src:url('../esenapaj.otf') format('opentype');
 }
 
 body{
-  font-family: 'esenapa';
+  font-family: "esenapa";
   margin: 0;
   color: #313131;
   text-align: center;
@@ -17,17 +17,11 @@ body{
   position: relative;
 }
 
-.title p{
-  position: absolute;
-  color: green;
-  font-size: xx-large;
-  text-align: center;
-  top: 0;
-  left: 0;
-}
 
 .title img{
-  width: 100%;
+
+  text-align: center;
+
 }
 
 h1{
@@ -36,8 +30,10 @@ h1{
 }
 
 h2{
-  font-size: 120%
-  background-color: green;
+  font-size: 120%;
+  background-image:url("../img/bg1.jpg");
+  text-align: center;
+  width:50%;
   color: red;
 }
 
@@ -94,6 +90,23 @@ from   { transform: translate(0%);}
 99%,to { transform: translate(-100%);}
 }
 
+/*Slidefastest*/
+.slidingfastest {
+margin:0;
+padding-left:1260px;
+display:inline-block;
+white-space:nowrap;
+animation-name:marquee;
+animation-timing-function:linear;
+animation-duration:2s;
+animation-iteration-count:infinite;
+animation-direction: alternate;
+}
+@keyframes marquee {
+from   { transform: translate(0%);}
+99%,to { transform: translate(-100%);}
+}
+
 /*Blink*/
 .blinking {
     -webkit-animation: 0.5s linear 0s alternate none infinite running blink;
@@ -118,6 +131,33 @@ from   { transform: translate(0%);}
     20% { opacity: 1; }
     100% { opacity: 1; }
 }
+
+
+/*Blink*/
+.blinking2 {
+    -webkit-animation: 0.3s linear 0s alternate none infinite running blink;
+    -moz-animation: 0.3s linear 0s alternate none infinite running blink;
+    animation: 0.3s linear 0s alternate none infinite running blink;
+}
+@-webkit-keyframes blink {
+    0% { opacity: 0; }
+    19.9% { opacity: 0; }
+    20% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes blink {
+    0% { opacity: 0; }
+    19.9% { opacity: 0; }
+    20% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes blink {
+    0% { opacity: 0; }
+    19.9% { opacity: 0; }
+    20% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
 
 .rainbow {
   /* フォントサイズなど任意指定 */
