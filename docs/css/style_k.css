@@ -1,0 +1,141 @@
+@charset "utf-8"
+
+@font-face {
+  font-family: 'esenapa';
+  src:url("../esenapaj.otf");
+}
+
+body{
+  font-family: 'esenapa';
+  margin: 0;
+  color: #313131;
+  text-align: center;
+  background-color : #000000 ;
+}
+
+.title{
+  position: relative;
+}
+
+.title p{
+  position: absolute;
+  color: green;
+  font-size: xx-large;
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+
+.title img{
+  width: 100%;
+}
+
+h1{
+  font-size: 130%
+  color: #313131;
+}
+
+h2{
+  font-size: 120%
+  background-color: green;
+  color: red;
+}
+
+p1{
+  text-align: center;
+  }
+
+p2{
+
+}
+
+p3{
+
+
+}
+
+p4{
+
+
+}
+
+
+/*Slide*/
+.sliding {
+margin:0;
+padding-left:1260px;
+display:inline-block;
+white-space:nowrap;
+animation-name:marquee;
+animation-timing-function:linear;
+animation-duration:10s;
+animation-iteration-count:infinite;
+animation-direction: alternate;
+}
+@keyframes marquee {
+from   { transform: translate(0%);}
+99%,to { transform: translate(-100%);}
+}
+
+/*Slidefast*/
+.slidingfast {
+margin:0;
+padding-left:724px;
+display:inline-block;
+white-space:nowrap;
+animation-name:marquee;
+animation-timing-function:linear;
+animation-duration:3s;
+animation-iteration-count:infinite;
+animation-direction: alternate;
+}
+@keyframes marquee {
+from   { transform: translate(0%);}
+99%,to { transform: translate(-100%);}
+}
+
+/*Blink*/
+.blinking {
+    -webkit-animation: 0.5s linear 0s alternate none infinite running blink;
+    -moz-animation: 0.5s linear 0s alternate none infinite running blink;
+    animation: 0.5s linear 0s alternate none infinite running blink;
+}
+@-webkit-keyframes blink {
+    0% { opacity: 0; }
+    19.9% { opacity: 0; }
+    20% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@-moz-keyframes blink {
+    0% { opacity: 0; }
+    19.9% { opacity: 0; }
+    20% { opacity: 1; }
+    100% { opacity: 1; }
+}
+@keyframes blink {
+    0% { opacity: 0; }
+    19.9% { opacity: 0; }
+    20% { opacity: 1; }
+    100% { opacity: 1; }
+}
+
+.rainbow {
+  /* フォントサイズなど任意指定 */
+  font: bold 10em / 1 Verdana, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  /* 背景グラデーションを指定・幅を 200% にしておく */
+  background: linear-gradient(to right, #f00 0%, #f80 14.28%, #dd0 28.56%, #0d0 42.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%, #f00 100%) 0% center / 200% auto;
+  /* 背景画像を文字でマスクする */
+          background-clip: text;
+  -webkit-background-clip: text;
+  /* 文字色を透明にできればよく color: transparent でも color: rgba(0, 0, 0, 0) でも可 */
+          text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  /* アニメーション指定 */
+  animation: rainbow 4s linear infinite;
+}
+
+/* 背景の横位置をズラす */
+@keyframes rainbow {
+  to { background-position-x: 200%; }
+}
