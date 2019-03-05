@@ -10,20 +10,40 @@
 
 <body>
 <header>
-    <h1>ポンポコたぬごろう</h1>
+    <h1>仮タイトル</h1>
 </header>
 <div id="branding">
   <p>トップ画像</p>
 </div>
-<nav>
-  <ul>
-    <li><a href="#">ホーム</a></li>
-    <li><a href="#">絵</a></li>
-    <li><a href="#">漫画</a></li>
-    <li><a href="#">プロフィール</a></li>
-    <li><a href= "kaweru.html">カエルスムージー</a></li>
-  </ul>
-</nav>
+
+<span class="menu-toggle"><i class="blogicon-reorder lg"></i>MENU</span>
+<ul id='menu'>
+<div class="menu-inner">
+<li><a href='url'>ホーム</a></li>
+<li><a href='url'>絵</a></li>
+<li><a href='url'>漫画</a></li>
+<li><a href='url'>プロフィール</a></li>
+<li><a href='kaweru.html'>カエルスムージー</a></li>
+</div>
+</ul>
+
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+<script>
+    $(function(){
+        $(".menu-toggle").on("click", function() {
+            $(this).next().slideToggle();
+        });
+    });
+     $(window).resize(function(){
+    var win = $(window).width();
+    var p = 768;
+    if(win > p){
+      $("#menu").show();
+    } else {
+      $("#menu").hide();
+    }
+  });
+</script>
 
 <!--記事 -->
 <section>
@@ -76,6 +96,7 @@
   <a href="#" class="btn">&gt;もっと見る</a>
 </article>
 </section>
+
 
 <footer>
 <address>Copyright(C)2019 P.TANUGOROU,Allright Reserved.</address>
