@@ -1,10 +1,5 @@
 @charset "utf-8";
 
-@font-face {
-  font-family: 'dot';
-  src:url(./PixelMplus10-Regular.ttf);
-}
-
 body{
   font: 14px/1.6 "Hiragino Kaku Gothic Pro",Osaka,"メイリオ","ＭＳ Ｐゴシック","MS PGothic",Verdana,Arial,sans-serif;
   margin:0;
@@ -79,6 +74,106 @@ header p{
     padding-left: 3%;
 }
 
+
+#menu {
+  position: relative;
+  width: 100%;
+  padding-left: 0px;
+  height: 40px;
+  text-align: center;
+}
+
+#menu-inner {
+  width: 1260px;
+  margin: 0 auto;
+  height: 40px;
+  background: #343838;
+}
+
+#menu li {
+  list-style-type: none;
+  float: left;
+  height: 40px;
+  text-align: center;
+  background-color: #313131;
+  width: 20%;
+}
+
+#menu li a {
+  display: block;
+  color: #46c63d;
+  font-size: 80%;
+  font-weight: bold;
+  line-height: 40px;
+}
+
+#menu li:hover a {
+  color: #00DFFC;
+  background: #FFFFFF;
+  transition: : all .5s;
+}
+
+.menu-toggle {
+  display: none;
+}
+
+/*PC１カラム*/
+@media screen and (max-width:968px) {
+  .menu-inner {
+    width: 768px;
+  }
+}
+
+/*タブレット*/
+@media screen and (max-width:768px) {
+  #top-editarea{
+  height: initial;
+  background: #000000;/*MENU背景色*/
+  text-align: right;/*MENUの文字の位置*/
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.menu-toggle{
+ color: #000000;/*MENUの文字色*/
+ display: inline-block;
+ padding: 5px;
+ margin: 3px;
+}
+#menu {
+ width: 100%;
+ display: none;
+ height: initial;
+ padding: 0;
+ margin: 0;
+ background-color: #000000;/*MENU背景色*/
+}
+.menu-inner{
+ width: 100%;
+ height: initial;
+ position: static;
+ background-color: #000000;
+ margin: 0;
+}
+#menu li{
+ float: none;
+ height: 35px;
+ width: 100%;
+ list-style-type: none;
+ background-color: #000000;/*リスト文字の背景色*/
+ margin: 0 auto;
+ text-align: left;/*リストの文字の位置*/
+}
+#menu li a {
+ height: initial;
+ color: #343838;/*リスト文字色*/
+ display: block;
+}
+#menu li:hover a{
+ color: initial;
+ background: initial;
+}
+}
 
 
 nav{
