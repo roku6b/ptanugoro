@@ -13,7 +13,7 @@ for (var i = 0; i < stripCount; i++) {
   stripX[i] = Math.floor(Math.random() * 1265);
   stripY[i] = -100;
   dY[i] = Math.floor(Math.random() * 7) + 3;
-  stripFontSize[i] = Math.floor(Math.random() * 16) + 8;
+  stripFontSize[i] = Math.floor(Math.random() * 5) + 8;
 }
 var theColors = ['#fafad2', '#fffacd', '#f5deb3', '#f0e68c', '#ffff00', '#ffd700'];
 var elem, context, timer;
@@ -61,8 +61,8 @@ function draw() {
     if (stripY[j] > 1358) {
       stripX[j] = Math.floor(Math.random() * canvas.width);
       stripY[j] = -100;
-      dY[j] = Math.floor(Math.random() * 7) + 3;
-      stripFontSize[j] = Math.floor(Math.random() * 16) + 8;
+      dY[j] = Math.floor(Math.random() * 2) + 3;
+      stripFontSize[j] = Math.floor(Math.random() * 5) + 8;
       drawStrip(stripX[j], stripY[j]);
     } else drawStrip(stripX[j], stripY[j]);
     stripY[j] += dY[j];
