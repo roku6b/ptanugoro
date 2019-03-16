@@ -120,12 +120,14 @@ p.aqua {
 
 
 strong {
+  font-family: 'ese';
   font-size: xx-large;
   text-align: center;
   color: red;
 }
 
 line{
+  font-family: 'ese';
   font-size: xx-large;
   text-align: center;
   border-bottom: double;
