@@ -1,28 +1,31 @@
 @charset "utf-8"
 @font-face {
-  font-family: 'esenapa';
-  src: url('../font/esenapaj.otf') format('opentype');
+  font-family: 'ese';
+  src: url('esenapaj.woff') format('woff');
 }
 
 head {
   height: 100%;
+  width: 100%;
 }
 
 body {
-  font-family: 'esenapa';
-  margin: 0;
+  font-family: 'ese';
+  margin: auto;
   text-align: center;
   background-color: #000000;
   height: 100%;
 }
 
 #wrap {
+  font-family: 'ese';
   height: 100%;
   width: 100%;
   position: relative;
 }
 
 #canvas {
+  font-family: 'ese';
   position: fixed;
   top: 0;
   left: 0;
@@ -31,6 +34,7 @@ body {
 }
 
 #body {
+  font-family: 'ese';
   position: absolute;
   top: 0;
   left: 0;
@@ -104,10 +108,27 @@ p.orange {
   text-align: center;
 }
 
+p.white {
+  color: white;
+  text-align: center;
+}
+
+p.aqua {
+  color: aqua;
+  text-align: center;
+}
+
+
 strong {
-  color: red;
   font-size: xx-large;
   text-align: center;
+  color: red;
+}
+
+line{
+  font-size: xx-large;
+  text-align: center;
+  border-bottom: double;
 }
 
 .tbl1 {
