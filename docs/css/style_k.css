@@ -1,181 +1,332 @@
 @charset "utf-8"
-
 @font-face {
   font-family: 'esenapa';
-  src:url('../esenapaj.otf') format('opentype');
+  src: url('../font/esenapaj.otf') format('opentype');
 }
 
-body{
-  font-family: "esenapa";
+head {
+  height: 100%;
+}
+
+body {
+  font-family: 'esenapa';
   margin: 0;
-  color: #313131;
   text-align: center;
-  background-color : #000000 ;
+  background-color: #000000;
+  height: 100%;
 }
 
-.title{
+#wrap {
+  height: 100%;
+  width: 100%;
   position: relative;
 }
 
-
-.title img{
-
-  text-align: center;
-
+#canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-h1{
-  font-size: 130%
-  color: #313131;
+#body {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
-h2{
-  font-size: 120%;
-  background-image:url("../img/bg1.jpg");
+.title {
+  position: relative;
+}
+
+.title img {
   text-align: center;
-  width:50%;
+}
+
+.what {
+  position: relative;
+}
+
+.what img {
+  text-align: center;
+  height: 50px;
+  width: 300px;
+}
+
+.what p {
+  position: absolute;
+  text-align: center;
   color: red;
+  font-size: 2em;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
 }
 
-p1{
+h1 {
+  font-size: 190% color: #313131;
+}
+
+h2 {
+  font-size: 180%;
+  color: white;
   text-align: center;
-  }
-
-p2{
-
+  width: 50%;
 }
 
-p3{
-
-
+p.red {
+  color: red;
+  text-align: center;
 }
 
-p4{
+p.yellow {
+  color: yellow;
+  text-align: center;
+}
+
+p.purple {
+  color: purple;
+  text-align: center;
+}
+
+p.green {
+  color: green;
+  text-align: center;
+}
+
+p.orange {
+  color: orange;
+  text-align: center;
+}
+
+strong {
+  color: red;
+  font-size: xx-large;
+  text-align: center;
+}
+
+.tbl1 {
+  font-size: x-large;
+  color: orange;
+  border: double;
+  width: 300px;
+  text-align: center;
+  margin: auto;
+}
+
+tbl1.th .tr .td{
+  color:orange;
+  font-size: x-large;
+    text-align: center;
+}
+
+tbl1.td{
+  color:orange;
+  font-size: x-large;
+    text-align: center;
+}
 
 
+
+
+button.kbutton {
+  font-size: XX-large;
+  padding: 10px 30px;
 }
 
 
 /*Slide*/
+
 .sliding {
-margin:0;
-padding-left:1260px;
-display:inline-block;
-white-space:nowrap;
-animation-name:marquee;
-animation-timing-function:linear;
-animation-duration:10s;
-animation-iteration-count:infinite;
-animation-direction: alternate;
-}
-@keyframes marquee {
-from   { transform: translate(0%);}
-99%,to { transform: translate(-100%);}
+  margin: 0;
+  padding-left: 1260px;
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-/*Slidefast*/
+@keyframes marquee {
+  from {
+    transform: translate(0%);
+  }
+  99%, to {
+    transform: translate(-100%);
+  }
+}
+
 .slidingfast {
-margin:0;
-padding-left:724px;
-display:inline-block;
-white-space:nowrap;
-animation-name:marquee;
-animation-timing-function:linear;
-animation-duration:3s;
-animation-iteration-count:infinite;
-animation-direction: alternate;
-}
-@keyframes marquee {
-from   { transform: translate(0%);}
-99%,to { transform: translate(-100%);}
+  margin: 0;
+  padding-left: 724px;
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
 
-/*Slidefastest*/
+@keyframes marquee {
+  from {
+    transform: translate(0%);
+  }
+  99%, to {
+    transform: translate(-100%);
+  }
+}
+
 .slidingfastest {
-margin:0;
-padding-left:1260px;
-display:inline-block;
-white-space:nowrap;
-animation-name:marquee;
-animation-timing-function:linear;
-animation-duration:2s;
-animation-iteration-count:infinite;
-animation-direction: alternate;
+  margin: 0;
+  padding-left: 1260px;
+  display: inline-block;
+  white-space: nowrap;
+  animation-name: marquee;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+
 @keyframes marquee {
-from   { transform: translate(0%);}
-99%,to { transform: translate(-100%);}
+  from {
+    transform: translate(0%);
+  }
+  99%, to {
+    transform: translate(-100%);
+  }
 }
 
-/*Blink*/
 .blinking {
-    -webkit-animation: 0.5s linear 0s alternate none infinite running blink;
-    -moz-animation: 0.5s linear 0s alternate none infinite running blink;
-    animation: 0.5s linear 0s alternate none infinite running blink;
+  -webkit-animation: 0.5s linear 0s alternate none infinite running blink;
+  -moz-animation: 0.5s linear 0s alternate none infinite running blink;
+  animation: 0.5s linear 0s alternate none infinite running blink;
 }
+
 @-webkit-keyframes blink {
-    0% { opacity: 0; }
-    19.9% { opacity: 0; }
-    20% { opacity: 1; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  19.9% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
 @-moz-keyframes blink {
-    0% { opacity: 0; }
-    19.9% { opacity: 0; }
-    20% { opacity: 1; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  19.9% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
+
 @keyframes blink {
-    0% { opacity: 0; }
-    19.9% { opacity: 0; }
-    20% { opacity: 1; }
-    100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  19.9% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-
-/*Blink*/
 .blinking2 {
-    -webkit-animation: 0.3s linear 0s alternate none infinite running blink;
-    -moz-animation: 0.3s linear 0s alternate none infinite running blink;
-    animation: 0.3s linear 0s alternate none infinite running blink;
-}
-@-webkit-keyframes blink {
-    0% { opacity: 0; }
-    19.9% { opacity: 0; }
-    20% { opacity: 1; }
-    100% { opacity: 1; }
-}
-@-moz-keyframes blink {
-    0% { opacity: 0; }
-    19.9% { opacity: 0; }
-    20% { opacity: 1; }
-    100% { opacity: 1; }
-}
-@keyframes blink {
-    0% { opacity: 0; }
-    19.9% { opacity: 0; }
-    20% { opacity: 1; }
-    100% { opacity: 1; }
+  -webkit-animation: 0.3s linear 0s alternate none infinite running blink;
+  -moz-animation: 0.3s linear 0s alternate none infinite running blink;
+  animation: 0.3s linear 0s alternate none infinite running blink;
 }
 
+@-webkit-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  19.9% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  19.9% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  19.9% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .rainbow {
-  /* フォントサイズなど任意指定 */
   font: bold 10em / 1 Verdana, Helvetica, Arial, sans-serif;
   text-transform: uppercase;
-  /* 背景グラデーションを指定・幅を 200% にしておく */
   background: linear-gradient(to right, #f00 0%, #f80 14.28%, #dd0 28.56%, #0d0 42.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%, #f00 100%) 0% center / 200% auto;
-  /* 背景画像を文字でマスクする */
-          background-clip: text;
+  background-clip: text;
   -webkit-background-clip: text;
-  /* 文字色を透明にできればよく color: transparent でも color: rgba(0, 0, 0, 0) でも可 */
-          text-fill-color: transparent;
+  text-fill-color: transparent;
   -webkit-text-fill-color: transparent;
-  /* アニメーション指定 */
   animation: rainbow 4s linear infinite;
 }
 
-/* 背景の横位置をズラす */
 @keyframes rainbow {
-  to { background-position-x: 200%; }
+  to {
+    background-position-x: 200%;
+  }
+}
+
+#stalker {
+  position: fixed;
+  transition: left 1.5s ease-in-out 0s, top 1.5s ease-in-out 0s;
+  -webkit-transition: left 1.5s ease-in-out 0s, top 1.5s ease-in-out 0s;
+  z-index: 9999;
 }
